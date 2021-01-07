@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 113813749}
   - component: {fileID: 113813748}
   - component: {fileID: 113813747}
+  - component: {fileID: 113813752}
+  - component: {fileID: 113813753}
   m_Layer: 0
   m_Name: Character Select
   m_TagString: Untagged
@@ -150,7 +152,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113813745}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 1.5}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 390683648}
@@ -339,6 +341,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &113813752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113813745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e75451a5ce8de448c7c8924239bc13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &113813753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113813745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5676cd6f114497459b056bfbd234a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayArcade: 0
+  isLevelSelect: 0
+  isCharacterSelect: 1
+  isSound: 0
+  isExit: 0
 --- !u!1 &366267123
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,6 +688,9 @@ GameObject:
   - component: {fileID: 850912965}
   - component: {fileID: 850912964}
   - component: {fileID: 850912963}
+  - component: {fileID: 850912967}
+  - component: {fileID: 850912968}
+  - component: {fileID: 850912969}
   m_Layer: 0
   m_Name: Level Select
   m_TagString: Untagged
@@ -672,7 +706,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850912961}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 2.5}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 390683648}
@@ -848,6 +882,48 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &850912967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850912961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e75451a5ce8de448c7c8924239bc13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &850912968
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850912961}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20.056395, y: 3.3540704, z: 0}
+  m_Center: {x: -0.10485172, y: 0.1457012, z: 0}
+--- !u!114 &850912969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850912961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5676cd6f114497459b056bfbd234a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayArcade: 0
+  isLevelSelect: 1
+  isCharacterSelect: 0
+  isSound: 0
+  isExit: 0
 --- !u!1 &936727285
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +938,8 @@ GameObject:
   - component: {fileID: 936727289}
   - component: {fileID: 936727288}
   - component: {fileID: 936727287}
+  - component: {fileID: 936727292}
+  - component: {fileID: 936727293}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -877,7 +955,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936727285}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 390683648}
@@ -1066,6 +1144,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &936727292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936727285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e75451a5ce8de448c7c8924239bc13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &936727293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936727285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5676cd6f114497459b056bfbd234a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayArcade: 0
+  isLevelSelect: 0
+  isCharacterSelect: 0
+  isSound: 0
+  isExit: 1
 --- !u!1 &1389569434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,6 +1188,7 @@ GameObject:
   - component: {fileID: 1389569437}
   - component: {fileID: 1389569436}
   - component: {fileID: 1389569441}
+  - component: {fileID: 1389569442}
   m_Layer: 0
   m_Name: Play Arcade
   m_TagString: Untagged
@@ -1096,7 +1204,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389569434}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 3.5}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 390683648}
@@ -1297,6 +1405,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e75451a5ce8de448c7c8924239bc13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1389569442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389569434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5676cd6f114497459b056bfbd234a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayArcade: 1
+  isLevelSelect: 0
+  isCharacterSelect: 0
+  isSound: 0
+  isExit: 0
 --- !u!1 &1808987333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,6 +1436,8 @@ GameObject:
   - component: {fileID: 1808987337}
   - component: {fileID: 1808987336}
   - component: {fileID: 1808987335}
+  - component: {fileID: 1808987340}
+  - component: {fileID: 1808987341}
   m_Layer: 0
   m_Name: Sound
   m_TagString: Untagged
@@ -1326,7 +1453,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808987333}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 390683648}
@@ -1515,6 +1642,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1808987340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808987333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e75451a5ce8de448c7c8924239bc13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1808987341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808987333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5676cd6f114497459b056bfbd234a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayArcade: 0
+  isLevelSelect: 0
+  isCharacterSelect: 0
+  isSound: 1
+  isExit: 0
 --- !u!1 &2099160662
 GameObject:
   m_ObjectHideFlags: 0
