@@ -22,6 +22,7 @@ public class MenuMouseHover : MonoBehaviour
     private void OnMouseEnter()
     {
         transform.localScale = increasedSize;
+        Debug.Log("HI");
     }
 
     private void OnMouseExit()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainMenuButtons : MonoBehaviour
 {
-    public bool isPlayArcade, isLevelSelect, isCharacterSelect, isSound, isExit;
+    public bool isPlayArcade, isLevelSelect, isCharacterSelect, isSound, isExit, isBack;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +18,12 @@ public class MainMenuButtons : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        if (isPlayArcade) { } //Application.LoadLevel(1);
-        else if (isLevelSelect) { } //Application.LoadLevel(1);
-        else if (isCharacterSelect) { } //Application.LoadLevel(1);
-        else if (isSound) { } //Application.LoadLevel(1);
+        //Application.LoadLevel("Scene Name"); (can also use the index of the scene!)
+        if (isPlayArcade) { Application.LoadLevel("ArcadeMode"); } 
+        else if (isLevelSelect) { Application.LoadLevel("LevelSelect"); } 
+        else if (isCharacterSelect) { Application.LoadLevel("CharacterSelect"); }
+        else if (isSound) { Application.LoadLevel("SoundSelect"); } 
         else if (isExit) { Application.Quit(); }
+        else if (isBack) { Application.LoadLevel("MainMenu"); }
     }
 }

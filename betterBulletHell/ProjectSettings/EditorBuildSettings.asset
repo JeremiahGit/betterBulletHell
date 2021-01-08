@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/MainMenu.unity
+    guid: 97ccd5c1498936048951d7d8789a56c2
+  - enabled: 1
+    path: Assets/Scenes/ArcadeMode.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 3815859ef67f4194d89207b64cac1576
+  - enabled: 1
+    path: Assets/Scenes/CharacterSelect.unity
+    guid: 40bf8fc028d5c86418b1629070cef1dd
+  - enabled: 1
+    path: Assets/Scenes/SoundSelect.unity
+    guid: 76bcb40a27683684b8f538f44ea7826f
   m_configObjects: {}
