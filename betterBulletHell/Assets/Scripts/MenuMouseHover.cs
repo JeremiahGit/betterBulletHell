@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MenuMouseHover : MonoBehaviour
 {
-    private GameObject text;
     private Vector3 increasedSize, originalSize;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +21,6 @@ public class MenuMouseHover : MonoBehaviour
     private void OnMouseEnter()
     {
         transform.localScale = increasedSize;
-        Debug.Log("HI");
     }
 
     private void OnMouseExit()
