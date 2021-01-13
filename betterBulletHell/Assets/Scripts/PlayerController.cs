@@ -1,12 +1,16 @@
-﻿using System.Collections;
+﻿/* 
+ * The player control script. This includes movement and fireing.
+ * The controls for movement are WASD / Arrow Keys.
+ * The control for shooting is spacebar.
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerController : MonoBehaviour
 {
     public float speed = 6;
     public float speedMod = 50;
-    public float fireRate = .075f;
+    public float fireRate;
     private float xinput, yinput;
 
     private bool isShooting = false;
@@ -15,13 +19,21 @@ public class PlayerController : MonoBehaviour
     private GameManager gm;
     public GameObject bullet;
 
+    /*
+     * 
+     */
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        //gm = GameObject.Find("GameManager").GetComponent<GameManager>();
-        fireRate = .075f;//This is necessasary because otherwise the bullets dont work properly \_(:/)_/
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
+        //This is necessasary because otherwise the bullets dont work properly \_(:/)_/
+        fireRate = .075f;
     }
 
+    /* 
+     * Movement and shooting are controlled in FixedUpdate()
+     */
     void FixedUpdate()
     {
         //Movement and Player Input
@@ -31,10 +43,15 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown("space"))
         {
-            StartCoroutine("ShootLoop");
+            StartCoroutine(ShootLoop());
         }
     }
 
+    /*
+     * The default shooting pattern for the player.
+     * Shoots burst fire projectiles that travel in a line.
+     * Does not allow more bullets by spamming the fire button.
+     */
     IEnumerator ShootLoop()
     {
         if (!isShooting)
@@ -52,9 +69,14 @@ public class PlayerController : MonoBehaviour
             isShooting = false;
         }
     }
+
+    /* 
+     * The player dies if the hitbox enters anything beside's it's own bullet or ability. 
+     * TODO: make death GUI
+     */
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.gameObject.CompareTag("Player"))
+        if (!other.gameObject.CompareTag("PlayerSpawn"))
         {
             Destroy(gameObject);
         }
