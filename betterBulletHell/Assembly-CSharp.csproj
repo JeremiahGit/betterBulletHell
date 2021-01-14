@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Astroid.cs" />
     <Compile Include="Assets\Scripts\GUI\LevelSelectBox.cs" />
     <Compile Include="Assets\Scripts\GUI\MainMenuButtons.cs" />
     <Compile Include="Assets\Scripts\GUI\MenuMouseHover.cs" />

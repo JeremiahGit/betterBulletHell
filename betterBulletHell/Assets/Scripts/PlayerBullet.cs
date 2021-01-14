@@ -7,8 +7,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
-    public float bulletSpeed = 20f;
-    public float speedMod = 50f;
+    public float bulletSpeed = 4f;
     private Rigidbody2D bulletRB;
 
 
@@ -19,7 +18,7 @@ public class PlayerBullet : MonoBehaviour
     void Start()
     {
         bulletRB = gameObject.GetComponent<Rigidbody2D>();
-        bulletRB.velocity = new Vector2(0, bulletSpeed * speedMod * Time.deltaTime);
+        bulletRB.velocity = new Vector2(0, bulletSpeed);
     }
 
     // Update is called once per frame

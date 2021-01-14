@@ -9,8 +9,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 6;
-    public float speedMod = 50;
-    public float fireRate;
+    private float speedMod;
+    private float fireRate;
     private float xinput, yinput;
 
     private bool isShooting = false;
@@ -28,7 +28,8 @@ public class PlayerController : MonoBehaviour
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         
         //This is necessasary because otherwise the bullets dont work properly \_(:/)_/
-        fireRate = .075f;
+        fireRate = 5;
+        speedMod = 50f;
     }
 
     /* 
@@ -62,9 +63,9 @@ public class PlayerController : MonoBehaviour
                 for (int i = 0; i < 3; i++)
                 {
                     Instantiate(bullet, rb.position, Quaternion.Euler(0, 0, 0));
-                    yield return new WaitForSeconds(fireRate); //Yes, I know there is no Time.deltaTime here
+                    yield return WaitFor.Frames(3);
                 }
-                yield return new WaitForSeconds(fireRate * 3.5f);
+                yield return WaitFor.Frames( (int)fireRate*5 );
             }
             isShooting = false;
         }
@@ -81,4 +82,16 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public static class WaitFor
+    {
+        public static IEnumerator Frames(int frameCount)
+        {
+            while (frameCount > 0)
+            {
+                frameCount--;
+                yield return null;
+            }
+        }
+    }
+
 }
