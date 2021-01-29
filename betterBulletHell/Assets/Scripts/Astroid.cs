@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * The astroid enemy. I need to have a custom spawn position for this emeny in order to make it spawn on screen instead of off screen.
+ * This is because the spawn manager spawns enemy off screen. This is by design.   ≥.≤
+ * 
+ */
 public class Astroid : MonoBehaviour
 {
     
@@ -23,6 +28,7 @@ public class Astroid : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         GetComponent<Renderer>().enabled = true;
+        //rb.transform.localScale = new Vector3(.1f, .1f, .1f);
         transform.position = new Vector3(Random.Range(xLeftBound, xRightBound), yLevel);
         gameObj = this.gameObject;
 
@@ -47,6 +53,7 @@ public class Astroid : MonoBehaviour
 
         transform.position = new Vector3(rb.position.x, rb.position.y+2f);
         rb.velocity = new Vector2(0, -speed);
+        //rb.transform.localScale = new Vector3(.2f, .2f, .2f);
         int selector = Random.Range(0, 2);
         if (selector == 0)
         {
