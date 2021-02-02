@@ -754,7 +754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyList:
-  - {fileID: 2506369027899008856, guid: 1edea16c2108daf43844491196321835, type: 3}
+  - {fileID: 5539475111291926310, guid: 1edea16c2108daf43844491196321835, type: 3}
   Lbound: 0
   Rbound: 0
   spawnRate: 3

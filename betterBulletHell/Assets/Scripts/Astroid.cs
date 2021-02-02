@@ -22,6 +22,7 @@ public class Astroid : MonoBehaviour
     public GameObject gameObj;
     public float flashTime;
     public float speed;
+    private float desiredScale = .2f;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +39,13 @@ public class Astroid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
 
+    void destroyGameObject()
+    {
+        ///Score Increment Here
+        Destroy(this.gameObject);
     }
 
     IEnumerator BusinessCat()
@@ -52,8 +59,8 @@ public class Astroid : MonoBehaviour
         }
 
         transform.position = new Vector3(rb.position.x, rb.position.y+2f);
+        transform.localScale = new Vector3(desiredScale, desiredScale, desiredScale);
         rb.velocity = new Vector2(0, -speed);
-        //rb.transform.localScale = new Vector3(.2f, .2f, .2f);
         int selector = Random.Range(0, 2);
         if (selector == 0)
         {
@@ -64,7 +71,10 @@ public class Astroid : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().sprite = astroidTwo;
 
         }
-            yield return null;
+
+        yield return new WaitForSeconds(4);
+        destroyGameObject();
+        yield return null;
     }
 
 }
