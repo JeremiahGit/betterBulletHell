@@ -16,11 +16,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject[] enemyList; //Fill with prefabs
     private int score;
-
     public TextMeshProUGUI scoreText; 
-
-
-
 
     void Awake()
     {

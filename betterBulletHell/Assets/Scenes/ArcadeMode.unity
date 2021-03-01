@@ -419,7 +419,7 @@ GameObject:
   - component: {fileID: 768286865}
   m_Layer: 0
   m_Name: GameBox
-  m_TagString: Enemy
+  m_TagString: Border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -520,7 +520,7 @@ EdgeCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
@@ -921,9 +921,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyList:
   - {fileID: 5539475111291926310, guid: 1edea16c2108daf43844491196321835, type: 3}
+  - {fileID: 1912950189794487531, guid: 8ec126f523c8d25429b38a90669acddf, type: 3}
   Lbound: 0
   Rbound: 0
-  spawnRate: 3
+  spawnRate: 1.16
   timeSinceSpawn: 0
 --- !u!1 &2089330183
 GameObject:
@@ -959,7 +960,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 785, y: 471}
+  m_AnchoredPosition: {x: 719, y: 435}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2089330185
@@ -1046,7 +1047,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 4.5010986}
   m_textInfo:
     textComponent: {fileID: 2089330185}
     characterCount: 10
