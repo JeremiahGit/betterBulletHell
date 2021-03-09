@@ -107,7 +107,7 @@ MonoBehaviour:
     type: 3}
   gameObj: {fileID: 0}
   flashTime: 0.6
-  speed: 25
+  speed: 30
 --- !u!50 &7867457621063450923
 Rigidbody2D:
   serializedVersion: 4

@@ -77,4 +77,12 @@ public class Astroid : MonoBehaviour
         yield return null;
     }
 
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Destroyer"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }

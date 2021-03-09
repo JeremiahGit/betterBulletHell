@@ -256,6 +256,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   bullet: {fileID: 6003208035885414438, guid: 048708c5d5991864ea679e966f733c7a, type: 3}
+--- !u!1001 &488261639
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6496601533863568150, guid: 56faa2f597dba9d4d92bc637bcb158a3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496601533863568150, guid: 56faa2f597dba9d4d92bc637bcb158a3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496601533863568150, guid: 56faa2f597dba9d4d92bc637bcb158a3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496601533863568150, guid: 56faa2f597dba9d4d92bc637bcb158a3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496601533863568150, guid: 56faa2f597dba9d4d92bc637bcb158a3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496601533863568150, guid: 56faa2f597dba9d4d92bc637bcb158a3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496601533863568150, guid: 56faa2f597dba9d4d92bc637bcb158a3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496601533863568150, guid: 56faa2f597dba9d4d92bc637bcb158a3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496601533863568150, guid: 56faa2f597dba9d4d92bc637bcb158a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496601533863568150, guid: 56faa2f597dba9d4d92bc637bcb158a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496601533863568150, guid: 56faa2f597dba9d4d92bc637bcb158a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141037868074286457, guid: 56faa2f597dba9d4d92bc637bcb158a3,
+        type: 3}
+      propertyPath: m_Name
+      value: Element Destroyer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56faa2f597dba9d4d92bc637bcb158a3, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,6 +991,7 @@ MonoBehaviour:
   enemyList:
   - {fileID: 5539475111291926310, guid: 1edea16c2108daf43844491196321835, type: 3}
   - {fileID: 1912950189794487531, guid: 8ec126f523c8d25429b38a90669acddf, type: 3}
+  - {fileID: 2052672134615292268, guid: 1297c181d0f4705489b9cc844b3fb380, type: 3}
   Lbound: 0
   Rbound: 0
   spawnRate: 1.16
