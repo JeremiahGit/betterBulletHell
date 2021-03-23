@@ -5,29 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuButtons : MonoBehaviour
 {
-    public bool isPlayArcade, isLevelSelect, isCharacterSelect, isSound, isExit, isBack, isLegacy;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool isPlayArcade, isLevelSelect, isCharacterSelect, isSound, isExit, isBack, isLegacy,
+                isRightPlayerSelectArrow, isLeftPlayerSelectArrow;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //TODO not be dum 
+    //public InformationManager info = new(InformationManager);
     private void OnMouseUp()
     {
+        //If I make my code look pretty maybe they will give me a raise!!!!!
         //SceneManager.LoadScene("Scene Name"); (can also use the index of the scene!)
-        if (isPlayArcade) { SceneManager.LoadScene("ArcadeMode"); } 
-        else if (isLevelSelect) { SceneManager.LoadScene("LevelSelect"); } 
+        if      (isPlayArcade)      { SceneManager.LoadScene("ArcadeMode");      }
+        else if (isLevelSelect)     { SceneManager.LoadScene("LevelSelect");     }
         else if (isCharacterSelect) { SceneManager.LoadScene("CharacterSelect"); }
-        else if (isSound) { SceneManager.LoadScene("SoundSelect"); } 
-        else if (isExit) { Application.Quit(); }
-        else if (isBack) { SceneManager.LoadScene("MainMenu"); }
-        else if (isLegacy) {
-        //    SceneManager.LoadScene("Legacy"); 
-        }
+        else if (isSound)           { SceneManager.LoadScene("SoundSelect");     }
+        else if (isExit)            { Application.Quit();                        }
+        else if (isBack)            { SceneManager.LoadScene("MainMenu");        }
+        else if (isLegacy)          {/*SceneManager.LoadScene("Legacy");*/       }
+
+        else if (isRightPlayerSelectArrow) { /* info.changePlayerRight(); */ }
+        else if (isLeftPlayerSelectArrow)  {/* info.changePlayerLeft();  */  }
     }
 }

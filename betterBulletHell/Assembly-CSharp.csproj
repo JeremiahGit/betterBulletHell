@@ -63,21 +63,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Astroid.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Astroid.cs" />
+    <Compile Include="Assets\Scripts\Enemies\RedBullet.cs" />
+    <Compile Include="Assets\Scripts\Enemies\SpikeEnemy.cs" />
+    <Compile Include="Assets\Scripts\Enemies\TrapazoidBullet.cs" />
+    <Compile Include="Assets\Scripts\Enemies\TrapazoidEnemy.cs" />
     <Compile Include="Assets\Scripts\GUI\LevelSelectBox.cs" />
     <Compile Include="Assets\Scripts\GUI\MainMenuButtons.cs" />
     <Compile Include="Assets\Scripts\GUI\MenuMouseHover.cs" />
     <Compile Include="Assets\Scripts\GUI\PauseButton.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\PlayerBullet.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\RedBullet.cs" />
+    <Compile Include="Assets\Scripts\InformationManager.cs" />
+    <Compile Include="Assets\Scripts\Player Things\PlayerBullet.cs" />
+    <Compile Include="Assets\Scripts\Player Things\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SetVolume.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\SpawnManager.cs" />
-    <Compile Include="Assets\Scripts\SpikeEnemy.cs" />
-    <Compile Include="Assets\Scripts\TrapazoidBullet.cs" />
-    <Compile Include="Assets\Scripts\TrapazoidEnemy.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

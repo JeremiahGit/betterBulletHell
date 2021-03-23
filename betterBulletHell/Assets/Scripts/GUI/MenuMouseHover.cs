@@ -5,11 +5,14 @@ using UnityEngine;
 public class MenuMouseHover : MonoBehaviour
 {
     private Vector3 increasedSize, originalSize;
+    public float incSizeF = 0.28f;
+    public float originalSizeF = 0.25f;
+
     // Start is called before the first frame update
     void Start()
     {
-        increasedSize = new Vector3(0.28f, 0.28f, 0.28f);
-        originalSize = new Vector3(.25f, .25f, .25f);
+        increasedSize = new Vector3(incSizeF, incSizeF, incSizeF);
+        originalSize = new Vector3(originalSizeF, originalSizeF, originalSizeF);
     }
 
     // Update is called once per frame

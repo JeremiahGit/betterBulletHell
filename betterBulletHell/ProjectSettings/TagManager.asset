@@ -8,6 +8,7 @@ TagManager:
   - PlayerSpawn
   - Border
   - Destroyer
+  - Info
   layers:
   - Default
   - TransparentFX
